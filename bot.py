@@ -86,7 +86,7 @@ def start_settings(update: Update, context: CallbackContext):
     reply_keyboard = [
         [InlineKeyboardButton("Bots", callback_data="bots"), InlineKeyboardButton("Channels", callback_data="channels")],
         [InlineKeyboardButton("Caption", callback_data="caption")],
-        [InlineKeyboardButton("Database", callback_data="database"), InlineKeyboardButton("Filters", callback_data="filters")],
+        [InlineKeyboardButton("Database", callback_data="database"), #InlineKeyboardButton("Filters", callback_data="filters")],
         [InlineKeyboardButton("Button", callback_data="button")],
         [InlineKeyboardButton("Back", callback_data="back")]
     ]
@@ -278,14 +278,14 @@ def add_button(update: Update, context: CallbackContext):
     pass
 
 # Conversation handler for filter settings
-filter_settings_conversation = ConversationHandler(
+"""filter_settings_conversation = ConversationHandler(
     entry_points=[CommandHandler('filters', filters)],
     states={
         STATE_ONE: [MessageHandler(Filters.text & ~Filters.COMMAND, next)],
         STATE_TWO: [MessageHandler(Filters.text & ~Filters.COMMAND, add_button)],
     },
     fallbacks=[],
-)
+)"""
 
 # Add command handlers
 dispatcher.add_handler(CommandHandler('add_database', add_database))
@@ -311,7 +311,7 @@ dispatcher.add_handler(CommandHandler('add_chat', add_chat))
 dispatcher.add_handler(CommandHandler('about', about))
 dispatcher.add_handler(CommandHandler('caption', caption))
 dispatcher.add_handler(CommandHandler('database', database))
-dispatcher.add_handler(CommandHandler('filters', filters))
+#dispatcher.add_handler(CommandHandler('filters', filters))
 dispatcher.add_handler(CommandHandler('button', button))
 dispatcher.add_handler(CommandHandler('add_caption', add_caption))
 dispatcher.add_handler(CommandHandler('add_mongodb_database', add_mongodb_database))
