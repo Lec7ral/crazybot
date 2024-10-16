@@ -288,8 +288,8 @@ def add_button(update: Update, context: CallbackContext):
 )"""
 
 # Add command handlers
-dispatcher.add_handler(CommandHandler('add_database', add_database))
-dispatcher.add_handler(filter_settings_conversation)  # Add conversation handler for filters
+#dispatcher.add_handler(CommandHandler('add_database', add_database))
+#dispatcher.add_handler(filter_settings_conversation)  # Add conversation handler for filters
 
 
 # Add other handlers and conversation handlers as needed
