@@ -86,7 +86,7 @@ def start_settings(update: Update, context: CallbackContext):
     reply_keyboard = [
         [InlineKeyboardButton("Bots", callback_data="bots"), InlineKeyboardButton("Channels", callback_data="channels")],
         [InlineKeyboardButton("Caption", callback_data="caption")],
-        [InlineKeyboardButton("Database", callback_data="database"), #InlineKeyboardButton("Filters", callback_data="filters")],
+        [InlineKeyboardButton("Database", callback_data="database")], #InlineKeyboardButton("Filters", callback_data="filters")],
         [InlineKeyboardButton("Button", callback_data="button")],
         [InlineKeyboardButton("Back", callback_data="back")]
     ]
